@@ -55,14 +55,14 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
     df = pd.read_csv(CITY_DATA[city])
-    
+
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(arg = df['Start Time'])
-    
+
     # extract month and day of week from Start Time to create new columns
     df['Month'] = df['Start Time'].dt.month_name()
     df['Day'] = df['Start Time'].dt.day_name()
-    
+
     if month != 'all':
         # filter by month to create the new dataframe
         df = df[df['Month'] == month.title()]
@@ -143,7 +143,7 @@ def user_stats(df):
 
     # Display counts of user types
     user_types = df['User Type'].value_counts()
-    
+
     if 'Subscriber' in user_types:
         print("Count of user type       : Subscriber", user_types['Subscriber'])
     if 'Customer' in user_types:
@@ -179,9 +179,9 @@ def display_raw_data(df):
     user_input = input("Would you like to see some raw data from the filtered dataset? Enter yes or no!\n").lower()
 
     while True:
-        if user_input == 'yes' and line_count+5 < df.shape[0]:
-            print(df.iloc[line_count : line_count + 5])
-            line_count += 5
+        if user_input == 'yes' and l_count+5 < df.shape[0]:
+            print(df.iloc[l_count : l_count + 5])
+            l_count += 5
             user_input = input("Would you like to display 5 more rows of raw data?? Enter yes or no!\n").lower()
         else:
             break
