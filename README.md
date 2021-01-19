@@ -9,12 +9,12 @@ In this project, using Python to explore data related to bike share systems for 
 According to the raw input from the user the code will import the data and will provide information by computing descriptive statistics. 
 
 ### Files used
-bikeshare.py
-chicago.csv
-new_york_city.csv
+bikeshare.py /
+chicago.csv /
+new_york_city.csv /
 washington.csv
 
 ### Credits
-Richard Kalehoff (Udacity mentor)
+Richard Kalehoff (Udacity mentor),
 Juno Lee         (Udacity Mentor)
 
