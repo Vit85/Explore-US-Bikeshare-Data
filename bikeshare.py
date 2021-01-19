@@ -190,6 +190,7 @@ def display_raw_data(df):
 
 def main():
     while True:
+        print("This is the main function!")
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
